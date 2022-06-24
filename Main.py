@@ -1,5 +1,7 @@
-import tkinter
-from pytube import YouTube
 
-vid = input("Please enter URL of the youtube video you will like to donwload.")
-yt = YouTube(vid)
+from pytube import YouTube
+from tkinter import *
+link = input("link: ")
+yt = YouTube(link)
+ys = yt.streams.get_highest_resolution()
+ys.download()
