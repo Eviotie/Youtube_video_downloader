@@ -21,7 +21,7 @@ window.title("Youtube_video_downloader")
 window.configure(background="#2e2c35")
 
 #center
-window_width = 300
+window_width = 200
 window_height = 400
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
@@ -31,14 +31,14 @@ window.geometry(f'{window_height}x{window_width}+{center_x}+{center_y}')
 
 Label(window, text="Enter link bellow", bg ="#2e2c35", fg="White", font= "arial 24 bold",).grid(row=0, column=0, stick=W)
 #Text Entry box
-textentry = Entry(window, width=20, bg="white")
+textentry = Entry(window, width=22, bg="white", font="ariall 24 bold")
 textentry.grid(row=1, column=0, sticky=W)
 #dowload button
 
-Button(window, text="Dowload", width = 0, command=click) .grid(row=3, column=0, stick=W)
+Button(window, text="Dowload", width = 56, command=click).grid(row=3, column=0, stick=W)
 #output
 
-output = Text(window, width=20, height=1, wrap=WORD, background="#2e2c35", fg="White", font="arial 12 bold")
+output = Text(window, width=44, height=2, wrap=WORD, background="#2e2c35", fg="White", font="arial 12 bold")
 output.grid(row=4, column=0, sticky=W)
 
 #mainloop for gui
